@@ -145,8 +145,12 @@
 		add: function(el) {
         var self = this;
         this.element.append(el)
-        this.options.items = $('> *', this.element);
+        /*
+        this.items = $(this.options.items, this.element);
+        this.items.bind(o.trigger, function() { self.select(this); });
         this._refresh();
+       */
+       this._create();
     },
 		_uiHash: function() {
 			return {
