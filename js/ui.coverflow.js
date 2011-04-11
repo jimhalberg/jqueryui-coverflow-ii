@@ -146,11 +146,7 @@
         var self = this;
         this.element.append(el)
         this.options.items = $('> *', this.element);
-        this.items = $(this.options.items, this.element).bind("click", function() {
-            self.moveTo(this);
-        });
-        this.itemWidth = this.items.outerWidth(true);
-        this.moveTo(this.items.length-1);
+        this._refresh();
     },
 		_uiHash: function() {
 			return {
