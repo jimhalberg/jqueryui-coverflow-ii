@@ -151,6 +151,7 @@
         this._refresh();
        */
        this._create();
+       this.select(this.items.length-1); // automatically select the last item.
     },
 		_uiHash: function() {
 			return {
